@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".MainActivity">
+
+    <!-- Main Heading TextView -->
+    <TextView
+        android:id="@+id/mainHeadingTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Converter App"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:padding="16dp"
+        android:background="#2196F3"
+        android:textColor="#FFFFFF"/>
+
+    <!-- Heading TextView for "Convert From" -->
+    <TextView
+        android:id="@+id/convertFromHeadingTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Convert From"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:padding="16dp"
+        android:layout_below="@id/mainHeadingTextView"
+        android:background="#64B5F6"
+        android:textColor="#FFFFFF"/>
+
+    <!-- Spinner for Source Unit -->
+    <Spinner
+        android:id="@+id/sourceUnitSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/convertFromHeadingTextView"
+        android:layout_marginTop="8dp"
+        android:layout_centerHorizontal="true"/>
+
+    <!-- Heading TextView for "Convert to" -->
+    <TextView
+        android:id="@+id/convertToHeadingTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Convert To"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:padding="16dp"
+        android:layout_below="@id/sourceUnitSpinner"
+        android:background="#64B5F6"
+        android:textColor="#FFFFFF"/>
+
+    <!-- Spinner for Destination Unit -->
+    <Spinner
+        android:id="@+id/destinationUnitSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/convertToHeadingTextView"
+        android:layout_marginTop="8dp"
+        android:layout_centerHorizontal="true"/>
+
+    <!-- EditText for Value -->
+    <EditText
+        android:id="@+id/valueEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/destinationUnitSpinner"
+        android:layout_marginTop="24dp"
+        android:layout_marginHorizontal="32dp"
+        android:hint="Enter Value"
+        android:inputType="numberDecimal"
+        android:background="#E3F2FD"
+        android:padding="8dp"/>
+
+    <!-- Button for Conversion -->
+    <Button
+        android:id="@+id/convertButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/valueEditText"
+        android:layout_marginTop="16dp"
+        android:layout_centerHorizontal="true"
+        android:text="Convert"
+        android:background="#1976D2"
+        android:textColor="#FFFFFF"
+        android:padding="12dp"/>
+
+    <!-- TextView for Result -->
+    <TextView
+        android:id="@+id/resultTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/convertButton"
+        android:layout_marginTop="16dp"
+        android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>
